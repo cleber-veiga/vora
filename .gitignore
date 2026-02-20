@@ -1,0 +1,37 @@
+# --- GERAL (Sistema Operacional e IDEs) ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
+
+# --- PYTHON (Backend) ---
+# Ignora arquivos compilados e cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ambientes virtuais (ajuste o nome se o seu for diferente de venv ou env)
+venv/
+.venv/
+env/
+
+# Banco de dados local (se estiver usando SQLite)
+*.sqlite3
+db.sqlite3
+
+# --- REACT / NODE (Frontend) ---
+# Dependências (nunca envie isso, é muito pesado!)
+node_modules/
+
+# Builds de produção
+build/
+dist/
+
+# --- SEGURANÇA (Arquivos de Senhas e Chaves) ---
+# Ignora arquivos de variáveis de ambiente em qualquer pasta
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
