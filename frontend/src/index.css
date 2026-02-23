@@ -1,1 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
+
+/* ─── Design Tokens ──────────────────────────────────────────────────── */
+:root {
+  --bg-base:        #0d0f14;
+  --bg-sidebar:     #111318;
+  --bg-surface:     #181b22;
+  --bg-elevated:    #1f2330;
+  --bg-hover:       #252a38;
+  --bg-card:        #1a1d27;
+
+  --border:         #272b3a;
+  --border-hover:   #3a4060;
+  --border-focus:   #5e6ad2;
+
+  --text-primary:   #eef0f6;
+  --text-secondary: #8b90a8;
+  --text-muted:     #555b72;
+
+  --accent:         #5e6ad2;
+  --accent-hover:   #6e7be2;
+  --accent-glow:    rgba(94, 106, 210, 0.25);
+
+  --green:          #22c55e;
+  --yellow:         #f59e0b;
+  --blue:           #3b82f6;
+  --red:            #ef4444;
+
+  --radius-sm:      6px;
+  --radius-md:      10px;
+  --radius-lg:      14px;
+}
+
+/* ─── Base ───────────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  background-color: var(--bg-base);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Scrollbar ──────────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-hover);
+}
+
+/* ─── Focus ring global ──────────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ─── Selection ──────────────────────────────────────────────────────── */
+::selection {
+  background: rgba(94, 106, 210, 0.3);
+  color: var(--text-primary);
+}
